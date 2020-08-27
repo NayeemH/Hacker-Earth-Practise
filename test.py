@@ -1,5 +1,6 @@
-from collections import Counter
-for _ in range(int(input())):
-    a = Counter(input())
-    b = Counter(input())
-    print(sum((a-b).values())+sum(b-a).values())
+i = int(input())
+l1 = list(map(int, input().split()))
+s = 1
+for j in range(i):
+    s = (s*l1[j]) % (10**9+7)
+print(s)
